@@ -79,3 +79,232 @@ export PROVIDER=all
 curl -LO "https://github.com/GoogleCloudPlatform/terraformer/releases/download/$(curl -s https://api.github.com/repos/GoogleCloudPlatform/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-${PROVIDER}-linux-amd64"
 chmod +x terraformer-${PROVIDER}-linux-amd64
 sudo mv terraformer-${PROVIDER}-linux-amd64 /usr/local/bin/terraformer
+--------------------------------------------------------------
+# Complete Git Commands Reference (Beginner → Advanced)
+
+This document contains **all commonly used Git commands**, organized by category. You can use this as a **study guide, interview reference, or daily DevOps handbook**.
+
+---
+
+## 1. Git Setup & Configuration
+
+```bash
+git --version
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+git config --global --list
+git config --list
+```
+
+---
+
+## 2. Repository Creation & Cloning
+
+```bash
+git init
+git clone <repo-url>
+```
+
+---
+
+## 3. Status & Tracking
+
+```bash
+git status
+git status -sb
+```
+
+---
+
+## 4. Adding & Committing Changes
+
+```bash
+git add file.txt
+git add .
+git commit -m "message"
+git commit -am "message"
+```
+
+---
+
+## 5. Viewing History & Logs
+
+```bash
+git log
+git log --oneline
+git log --graph --oneline --all
+git show <commit-id>
+```
+
+---
+
+## 6. Branching
+
+```bash
+git branch
+git branch -a
+git branch <branch-name>
+git checkout <branch-name>
+git checkout -b <branch-name>
+git switch <branch-name>
+git branch -d <branch-name>
+```
+
+---
+
+## 7. Merging & Rebasing
+
+```bash
+git merge <branch>
+git rebase <branch>
+git rebase --abort
+git rebase --continue
+```
+
+---
+
+## 8. Remote Repositories
+
+```bash
+git remote -v
+git remote add origin <repo-url>
+git remote remove origin
+git remote set-url origin <new-url>
+```
+
+---
+
+## 9. Push & Pull
+
+```bash
+git push
+git push -u origin main
+git pull
+git pull origin main
+```
+
+---
+
+## 10. Fetch
+
+```bash
+git fetch
+git fetch --all
+```
+
+---
+
+## 11. Undo & Reset
+
+```bash
+git restore <file>
+git restore --staged <file>
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
+```
+
+---
+
+## 12. Stash (Temporary Save)
+
+```bash
+git stash
+git stash list
+git stash apply
+git stash pop
+git stash drop
+```
+
+---
+
+## 13. Diff & Compare
+
+```bash
+git diff
+git diff --staged
+git diff branch1 branch2
+```
+
+---
+
+## 14. Tags (Releases)
+
+```bash
+git tag
+git tag v1.0
+git push origin v1.0
+git tag -d v1.0
+```
+
+---
+
+## 15. Cherry-pick
+
+```bash
+git cherry-pick <commit-id>
+```
+
+---
+
+## 16. Clean & Maintenance
+
+```bash
+git clean -f
+git gc
+git fsck
+```
+
+---
+
+## 17. SSH & Authentication
+
+```bash
+ssh-keygen -t ed25519
+ssh -T git@github.com
+git config --global credential.helper store
+```
+
+---
+
+## 18. Fork & Upstream (GitHub Workflow)
+
+```bash
+git remote add upstream <original-repo>
+git fetch upstream
+git merge upstream/main
+```
+
+---
+
+## 19. Useful Shortcuts
+
+```bash
+git commit --amend
+git push --force-with-lease
+git blame <file>
+git reflog
+```
+
+---
+
+## 20. Most Used Commands (Daily DevOps)
+
+```bash
+git status
+git add .
+git commit -m "msg"
+git pull
+git push
+```
+
+---
+
+## Interview Tip
+
+> Git is a **distributed version control system**. Most real-world workflows use **feature branches, pull requests, and CI/CD pipelines**.
+
+---
+
+### End of Document
+
